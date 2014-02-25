@@ -1,0 +1,6 @@
+---
+- name: install git, subversion and redmine
+  hosts: target
+  user: root
+  roles:
+    - proxy
