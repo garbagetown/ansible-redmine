@@ -1,0 +1,26 @@
+---
+- name: install epel.repo
+  yum: name=http://ftp.riken.jp/Linux/fedora/epel/6/i386/epel-release-6-8.noarch.rpm state=present
+
+- name: install development group
+  yum: pkg='@development' state=present
+
+- name: install vim
+  yum: pkg=vim state=present
+
+- name: install ruby and passenger dependency
+  yum: pkg={{ item }} state=present enablerepo=epel
+  with_items:
+    - openssl-devel
+    - zlib-devel
+    - gdbm-devel
+    - readline-devel
+    - ncurses-devel
+    - libffi-devel
+    - libyaml-devel
+    - libxml2-devel
+    - libxslt-devel
+    - libicu-devel
+    - libcurl-devel
+    - curl  
+    - httpd-devel

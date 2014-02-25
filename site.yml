@@ -4,3 +4,4 @@
   user: root
   roles:
     - proxy
+    - packages
