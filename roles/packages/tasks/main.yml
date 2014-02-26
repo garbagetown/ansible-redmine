@@ -8,7 +8,7 @@
 - name: install vim
   yum: pkg=vim state=present
 
-- name: install ruby and passenger dependency
+- name: install ruby, passenger and redmine dependency
   yum: pkg={{ item }} state=present enablerepo=epel
   with_items:
     - openssl-devel
@@ -24,3 +24,5 @@
     - libcurl-devel
     - curl  
     - httpd-devel
+    - ImageMagick
+    - ImageMagick-devel

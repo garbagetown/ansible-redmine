@@ -1,0 +1,5 @@
+---
+redmine_ver: "2.4.3"
+download_path: /usr/local/src
+redmine_mysql_password: redmine
+deploy_dir: /var/apps
