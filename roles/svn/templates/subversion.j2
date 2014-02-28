@@ -3,10 +3,10 @@ LoadModule authz_svn_module   modules/mod_authz_svn.so
 
 <Location /svn>
   DAV svn
-  SVNParentPath {{ user_home }}
+  SVNParentPath {{ svn_parent_path }}
   SVNListParentPath off
   AuthType Basic
   AuthName "Subversion repository"
-  AuthUserFile {{ user_home }}/htpasswd
+  AuthUserFile {{ svn_parent_path }}/htpasswd
   Require valid-user
 </Location>
