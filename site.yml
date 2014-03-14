@@ -1,14 +1,14 @@
 ---
 - name: install git, subversion and redmine
-  hosts: target
+  hosts: redmine
   user: root
   roles:
     - proxy
     - packages
+    - git
+    - svn
     - ruby
     - mysql
     - apache
     - passenger
     - redmine
-    - git
-    - svn
