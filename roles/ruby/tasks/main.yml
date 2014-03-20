@@ -1,6 +1,6 @@
 ---
 - name: update rbenv repo
-  git: repo=git://github.com/sstephenson/rbenv.git dest={{ rbenv_root }} version=v0.4.0
+  git: repo=https://github.com/sstephenson/rbenv.git dest={{ rbenv_root }} version=v0.4.0
 
 - name: add rbenv to path
   file: path=/usr/local/bin/rbenv src={{ rbenv_root }}/bin/rbenv state=link
@@ -19,7 +19,7 @@
   when: rbuild_present|failed
 
 - name: clone ruby-build repo
-  git: repo=git://github.com/sstephenson/ruby-build.git dest={{ tempdir.stdout }}/ruby-build
+  git: repo=https://github.com/sstephenson/ruby-build.git dest={{ tempdir.stdout }}/ruby-build
   when: rbuild_present|failed
 
 - name: install ruby-build
