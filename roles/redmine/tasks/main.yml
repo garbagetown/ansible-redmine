@@ -40,4 +40,9 @@
 
 - name: copy redmine.conf file
   template: src=redmine.conf dest=/etc/httpd/conf.d/redmine.conf
-  notify: restart httpd
+
+- name: restart iptables
+  service: name=iptables state=restarted
+
+- name: restart httpd
+  service: name=httpd state=restarted
