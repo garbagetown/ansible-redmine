@@ -2,6 +2,9 @@
 - name: install epel.repo
   yum: name=http://ftp.riken.jp/Linux/fedora/epel/6/i386/epel-release-6-8.noarch.rpm state=present
 
+- name: upgrade nss
+  command: yum -y --disablerepo=epel update nss
+
 - name: install development group
   yum: pkg='@development' state=present
 
