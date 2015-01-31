@@ -5,10 +5,10 @@
   roles:
     - proxy
     - packages
-    - git
+    - apache
     - svn
+    - git
     - ruby
     - mysql
-    - apache
     - passenger
     - redmine
