@@ -5,7 +5,7 @@
     - svn
     - mod_dav_svn
 
-# the password is generated usgin python -c 'import crypt; print crypt.crypt("svn", "salt")'
+# the password is generated using python -c 'import crypt; print crypt.crypt("svn", "salt")'
 - name: create svn user
   user: name=svn password=sawQePaH6MDZA
 
